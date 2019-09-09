@@ -38,6 +38,7 @@ public class ListController {
 
         ArrayList<? extends JobField> items;
 
+
         switch(column) {
             case EMPLOYER:
                 items = jobData.getEmployers().findAll();
@@ -60,6 +61,7 @@ public class ListController {
         return "list-column";
     }
 
+
     @RequestMapping(value = "jobs")
     public String listJobsByColumnAndValue(Model model,
             @RequestParam JobFieldType column, @RequestParam String name) {
@@ -72,8 +74,12 @@ public class ListController {
         return "list-jobs";
     }
 
+
+
     @RequestMapping(value = "all")
     public String listAllJobs(Model model) {
+
+
 
         ArrayList<Job> jobs = jobData.findAll();
 

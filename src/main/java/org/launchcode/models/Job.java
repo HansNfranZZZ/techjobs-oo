@@ -86,6 +86,7 @@ public class Job {
         return id == job.id;
     }
 
+
     @Override
     public int hashCode() {
         return id;
